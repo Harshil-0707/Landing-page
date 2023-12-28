@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 *{
     margin:0;
     padding:0;
@@ -5,20 +7,19 @@
 }
 
 body{
-    width:100vw;
-    height:100vh;
     background-repeat: no-repeat;
     background-color: hsl(218, 28%, 13%);
-    padding: 30px 60px;
     /* background-image: url('/images/bg-curvy-desktop.svg'); */
 }
 
 #container{
-    width: 96%;
+    width: 100%;
+    height: 100%;
+    padding: 50px 30px;
 }
 
 #container nav{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-between;
 }
@@ -57,6 +58,32 @@ body{
 }
 
 h2{
+    text-align: center;
     color: #fff;
-    width: 400px;
+    width: 540px;
+    font-family: 'Open Sans';
+}
+
+p{
+    width: 40%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Open Sans';
+    padding: 0 42px;
+    margin: 20px 0;
+}
+
+button{
+    width: 14%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    background-color: hsl(176, 58%, 52%);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: hsl(176, 56%, 69%);
 }
