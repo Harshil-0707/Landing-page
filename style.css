@@ -9,6 +9,7 @@
 body{
     background-repeat: no-repeat;
     background-color: hsl(218, 28%, 13%);
+    padding: 10px 20px;
     /* background-image: url('/images/bg-curvy-desktop.svg'); */
 }
 
@@ -32,10 +33,11 @@ body{
     list-style-type: none;
     display: flex;
     width: 20%;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #files{
+    margin: 0 0 10rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +45,7 @@ body{
 }
 
 #files img{
-    width: 540px;
+    width: 38%;
 }
 
 #nav-links .link a,
@@ -57,24 +59,32 @@ body{
     text-decoration: underline;
 }
 
-h2{
+#files h2{
+    margin: 14px 0;
     text-align: center;
     color: #fff;
-    width: 540px;
+    width: 24%;
     font-family: 'Open Sans';
+    @media (max-width:1440px) {
+        width:40%;
+    }
 }
 
-p{
+#files p{
     width: 40%;
     text-align: center;
     color: #fff;
     font-size: 14px;
     font-family: 'Open Sans';
-    padding: 0 42px;
+    padding: 0 98px;
     margin: 20px 0;
+    @media (max-width:1440px) {
+        padding: 0 60px;        
+    }
 }
 
 button{
+    margin-top: 10px;
     width: 14%;
     padding: 12px 0;
     border: none;
@@ -86,4 +96,119 @@ button{
 button:hover{
     cursor: pointer;
     background-color: hsl(176, 56%, 69%);
+}
+
+#features{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 60px;
+    margin: 0 0 4rem 0;
+}
+
+#features #access-files,
+#features #collaboration,
+#features #security,
+#features #storage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#features .head{
+    margin: 10px 0;
+    color: #fff;
+    font-size: 22px;
+    font-family: 'Open Sans';
+}
+
+#features p{
+    color: hsla(0, 0%, 100%, 0.71);
+    font-size: 14px;
+    font-family: 'Open Sans';
+}
+
+#features #access-files p{
+    width: 50%;
+    @media (max-width:1440px){
+        padding: 0 24px;
+    }
+}
+
+#features #collaboration p,
+#features #access-files p,
+#features #security p,
+#features #storage p{
+    width: 50%;
+    @media (max-width:1440px){
+        padding: 0 24px;
+    }
+}
+
+#features #access-files p{
+    padding: 0 28px;
+    text-align: center;
+    @media (max-width:1440px){
+        padding: 0 10px;
+        width: 54%;
+    }
+}
+
+#features #collaboration p{
+    padding: 0 10px;
+    text-align: center;
+    @media (max-width:1440px){
+        padding: 0;
+        width: 54%;
+    }
+}
+
+#features #security p{
+    padding: 0 6px;
+    text-align: center;
+    @media (max-width:1440px){
+        padding: 0 10px;
+        width: 60%;
+    }
+}
+
+#features #storage p{
+    padding: 0 12px;
+    text-align: center;
+    @media (max-width:1440px){
+        padding: 0;
+        width: 54%;
+    }
+}
+
+#about-work{
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+}
+
+#about-work img{
+    margin-right: 45px;
+}
+
+#about-work h2{
+    width: 50%;
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Open Sans';
+}
+
+#about-work p{
+    color: hsla(0, 0%, 100%, 0.71);
+    width: 68%;
+    line-height: 20px;
+}
+
+#para{
+    font-family: 'Open Sans';
+}
+
+#about-work .para1{
+    margin: 20px 0;
 }
