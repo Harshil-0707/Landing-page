@@ -90,7 +90,7 @@ button{
     border: none;
     border-radius: 30px;
     color: #fff;
-    background-color: hsl(176, 58%, 52%);
+    background: linear-gradient(to right, #65e2d9, #339ecc);
 }
 
 button:hover{
@@ -186,9 +186,10 @@ button:hover{
     padding: 0 3rem;
     display: flex;
     align-items: center;
+    margin-bottom: 14rem;
 }
 
-#about-work img{
+#about-work #img{
     margin-right: 45px;
 }
 
@@ -203,12 +204,86 @@ button:hover{
     color: hsla(0, 0%, 100%, 0.71);
     width: 68%;
     line-height: 20px;
+    @media (max-width:1440px) {
+        width: 95%;
+    }
 }
 
 #para{
     font-family: 'Open Sans';
+    margin-bottom: 20px;
 }
 
 #about-work .para1{
     margin: 20px 0;
+}
+
+#link a,
+#link a:visited{
+    position: relative;
+    padding: 0 0 6px 0;
+    color: hsl(176, 32%, 41%);
+    font-size: 18px;
+    font-family: 'Open Sans';
+    text-decoration: none;
+    border-bottom: 1px solid hsl(176, 32%, 41%);
+    margin-right: 0;
+}
+
+#link a svg{
+    margin-bottom: -2px;
+}
+
+#link a:hover{
+    color: hsla(0, 0%, 100%, 0.71);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.71);
+}
+
+#link a svg :hover{
+    fill: hsla(0, 0%, 100%, 0.71);
+}
+
+#testimonials{
+    display: grid;
+    color: #fff;
+    column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+}
+
+.tes{
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0 24px 50px;
+    border-radius: 6px;
+    background-color:  hsl(219, 30%, 18%);
+}
+
+.tes p{
+    width: 76%;
+    margin: 0 0 40px 0;
+    line-height: 24px;
+    font-family: 'Open Sans';
+    color: hsla(0, 0%, 100%, 0.771);
+    @media (max-width:1440px){
+        width: 90%;
+    }
+}
+
+.author{
+    display: flex;
+    align-items: center;
+}
+
+.author img{
+    height: 38px;
+    width: 35px;
+    border-radius: 100%;
+    margin-right: 14px;
+}
+
+.author-info{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans';
 }
