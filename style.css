@@ -386,6 +386,7 @@ button{
 }
 
 #sign-up #Email button:hover{
+    cursor: pointer;
     background-color: #8bd1db;
 }
 
@@ -420,4 +421,14 @@ button{
     font-family: 'Open Sans';
     margin-top: 10px;
     display: none;
+}
+
+footer{
+    padding: 8%;
+    width: 100%;
+    background-color: hsl(216, 53%, 9%);
+}
+
+#address .para{
+    color: #fff;
 }
