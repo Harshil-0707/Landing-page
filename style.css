@@ -7,6 +7,7 @@
 }
 
 body{
+    position: relative;
     background-repeat: no-repeat;
     background-color: hsl(218, 28%, 13%);
 }
@@ -333,10 +334,21 @@ button{
     color: hsla(0, 0%, 100%, 0.771);
 }
 
+footer{
+    width: 100%;
+    position: relative;
+    background-color: hsl(216, 53%, 9%);
+}
+
+
 #sign-up{
     width: 100%;
     display: flex;
     justify-content: center;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 #inner{
@@ -348,6 +360,7 @@ button{
     justify-content: center;
     border-radius: 8px;
     background-color: hsl(217, 28%, 15%);
+    box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.2);
     @media (max-width:1440px){
         width: 70%;
     }
@@ -423,12 +436,37 @@ button{
     display: none;
 }
 
-footer{
-    padding: 8%;
-    width: 100%;
-    background-color: hsl(216, 53%, 9%);
+
+#footer-logo img{
+    width: 140px;
+    margin: 20px 0 40px 0;
 }
 
-#address .para{
-    color: #fff;
+.contact{
+    display: grid;
+    grid-template-columns: repeat(1fr,12);
+}
+
+.contact .location{
+    grid-column: 1/5
+}
+
+.contact .contact-us {
+    grid-column: 5/8;
+}
+
+.contact .navfooter {
+    grid-column: 8/10;
+}
+
+.contact .navinfo {
+    grid-column: 10/11;
+}
+
+.contact .navsocial {
+    grid-column: 11/13;
+}
+
+.box-contact{
+    display: flex;
 }
