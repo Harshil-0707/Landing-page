@@ -17,7 +17,7 @@ body{
     height: 100%;
 }
 
-#container nav{
+#container #hero nav{
     margin-bottom: 40px;
     padding: 50px 40px;
     display: flex;
@@ -336,6 +336,8 @@ button{
 
 footer{
     width: 100%;
+    padding: 40px;
+    margin-top: 20rem;
     position: relative;
     background-color: hsl(216, 53%, 9%);
 }
@@ -436,15 +438,19 @@ footer{
     display: none;
 }
 
+#clear{
+    height: 1px;
+    margin-bottom: 8rem;
+}
 
 #footer-logo img{
     width: 140px;
-    margin: 20px 0 40px 0;
+    margin: 20px 0 40px 60px;
 }
 
 .contact{
     display: grid;
-    grid-template-columns: repeat(1fr,12);
+    grid-template-columns: repeat(12,1fr);
 }
 
 .contact .location{
@@ -469,4 +475,45 @@ footer{
 
 .box-contact{
     display: flex;
+}
+
+.navlist,
+.navsocial__menu{
+    list-style-type: none;
+}
+
+.box-contact{
+    width: 90%;
+    line-height: 23px;
+    font-family: 'Open Sans';
+    color: hsla(0, 0%, 100%, 0.771);
+}
+
+.box-contact__icon{
+    height: 20px;
+    margin: 6px 20px 0 0;
+}
+
+.contact-us .box-contact{
+    margin-bottom: 18px;
+    color: hsla(0, 0%, 100%, 0.771);
+}
+
+.contact-us .box-contact p{
+    padding-top: 4px;
+}
+
+.navlist__link,
+.navlist__link:visited{
+    text-decoration: none;
+    color: hsla(0, 0%, 100%, 0.771);
+    font-family: 'Open Sans';
+}
+
+.navlist__link:hover{
+    color: #fff;
+}
+
+.navlist__menu-item{
+    margin-bottom: 28px;
 }
