@@ -6,6 +6,5 @@ document.getElementById('submit').onclick = () => {
         document.getElementById('error').style.display = "block";
     }else{
         document.getElementById('error').style.display = "none";
-
     }
 };

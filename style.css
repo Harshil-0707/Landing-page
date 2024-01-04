@@ -8,7 +8,6 @@
 
 body{
     position: relative;
-    background-repeat: no-repeat;
     background-color: hsl(218, 28%, 13%);
 }
 
@@ -61,7 +60,8 @@ section{
 
 #nav-links .link a,
 #nav-links .link a:visited{
-    color: #ffffffb9;
+    color: hsla(0, 0%, 100%, 0.725);
+    font-family: 'Open Sans';
     text-decoration: none;
 }
 
@@ -76,10 +76,7 @@ section{
     color: #fff;
     width: 45%;
     font-size: 32px;
-    font-family: 'Open Sans';
-    @media (max-width:1440px) {
-        width:46%;
-    }
+    font-family: 'Open Sans';   
 }
 
 #files p{
@@ -90,9 +87,6 @@ section{
     font-family: 'Open Sans';
     padding: 0 98px;
     margin: 20px 0;
-    @media (max-width:1440px) {
-        padding: 0 40px;        
-    }
 }
 
 #btn{
@@ -145,9 +139,8 @@ section{
 
 #features #access-files p{
     width: 50%;
-    @media (max-width:1440px){
-        padding: 0 24px;
-    }
+    padding: 0 28px;
+    text-align: center;
 }
 
 #features #collaboration p,
@@ -155,45 +148,56 @@ section{
 #features #security p,
 #features #storage p{
     width: 50%;
-    @media (max-width:1440px){
-        padding: 0 24px;
-    }
-}
-
-#features #access-files p{
-    padding: 0 28px;
-    text-align: center;
-    @media (max-width:1440px){
-        padding: 0 10px;
-        width: 54%;
-    }
 }
 
 #features #collaboration p{
     padding: 0 10px;
     text-align: center;
-    @media (max-width:1440px){
+}
+
+@media (max-width:1440px) {
+    #files h2{
+        width:46%;
+    }
+    #files p{
+        padding: 0 40px;
+    }
+    #features #access-files p{
+        padding: 0 24px;
+        padding: 0 10px;
+        width: 54%;
+    }
+    #features #collaboration p,
+    #features #access-files p,
+    #features #security p,
+    #features #storage p{
+        padding: 0 24px;
+    }
+    #features #collaboration p{
         padding: 0;
         width: 54%;
+    }
+    #features #security p{
+        padding: 0 10px;
+        width: 60%;
+    }
+    #features #storage p{
+        padding: 0;
+        width: 54%;
+    }
+    #about-work p{
+        width: 82%;
     }
 }
 
 #features #security p{
     padding: 0 6px;
     text-align: center;
-    @media (max-width:1440px){
-        padding: 0 10px;
-        width: 60%;
-    }
 }
 
 #features #storage p{
     padding: 0 12px;
     text-align: center;
-    @media (max-width:1440px){
-        padding: 0;
-        width: 54%;
-    }
 }
 
 #about-work{
@@ -219,9 +223,6 @@ section{
     color: hsla(0, 0%, 100%, 0.71);
     width: 62%;
     line-height: 20px;
-    @media (max-width:1440px) {
-        width: 82%;
-    }
 }
 
 #para{
@@ -254,7 +255,7 @@ section{
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.71);
 }
 
-#link a svg :hover{
+#link a:hover > svg > g > g > use{
     fill: hsla(0, 0%, 100%, 0.71);
 }
 
@@ -268,6 +269,10 @@ section{
     column-gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
     position: relative;
+    @media (max-width:375px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
 
 .tes{
@@ -276,7 +281,6 @@ section{
     padding: 32px 0 24px 50px;
     border-radius: 3px;
     background-color:  hsl(219, 30%, 18%);
-    /* box-shadow: 10px 10px  hsla(220, 28%, 19%, 0.593); */
     @media (max-width:1440px){
         padding: 32px 10px 24px 30px;
     }
@@ -454,23 +458,24 @@ footer{
 }
 
 .contact .location{
-    grid-column: 1/5
+    grid-column: 1/5;
 }
 
 .contact .contact-us {
-    grid-column: 5/8;
+    padding: 0;
+    grid-column: 5/7;
 }
 
 .contact .navfooter {
-    grid-column: 8/10;
+    grid-column: 8/9;
 }
 
 .contact .navinfo {
-    grid-column: 10/11;
+    grid-column: 9/10;
 }
 
 .contact .navsocial {
-    grid-column: 11/13;
+    grid-column: 10/13;
 }
 
 .box-contact{
@@ -516,4 +521,51 @@ footer{
 
 .navlist__menu-item{
     margin-bottom: 28px;
+}
+
+.navsocial__menu{
+    display: flex;
+    justify-content: center;
+}
+
+.navsocial__link svg{
+    height: 35px;
+    fill: hsla(0, 0%, 100%, 0.771);
+}
+
+.mr{
+    margin-right: 14px;
+}
+
+.navsocial__link svg:hover{
+    fill: hsl(176, 68%, 64%);
+}
+
+@media (max-width:375px){
+    body{
+        width: 100%;
+    }
+    #container,#hero{
+        width: 100%;
+    }
+    #files{
+        background-image: url('/images/bg-curvy-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+    }
+    footer{
+        width: 100%;
+    }
+    #testimonial-1{
+        grid-row: 1/2;
+    }
+
+    #about-work{
+        flex-direction: column;
+    }
+    #features{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+    }
 }
