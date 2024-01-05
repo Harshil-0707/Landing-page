@@ -11,16 +11,10 @@ body{
     background-color: hsl(218, 28%, 13%);
 }
 
-#container{
-    width: 100%;
-    height: 100%;
-}
-
 #container #hero nav{
+    display: flex;
     margin-bottom: 40px;
     padding: 50px 40px;
-    display: flex;
-    justify-content: space-between;
 }
 
 #hero{
@@ -40,6 +34,7 @@ section{
     display: flex;
     width: 20%;
     justify-content: space-evenly;
+    margin-left: auto;
 }
 
 #files{
@@ -81,12 +76,12 @@ section{
 
 #files p{
     width: 46%;
-    text-align: center;
-    color: hsla(0, 0%, 100%, 0.819);
-    font-size: 18px;
-    font-family: 'Open Sans';
-    padding: 0 98px;
     margin: 20px 0;
+    font-size: 18px;
+    padding: 0 98px;
+    text-align: center;    
+    font-family: 'Open Sans';
+    color: hsla(0, 0%, 100%, 0.71);
 }
 
 #btn{
@@ -115,6 +110,10 @@ section{
     margin: 0 0 6rem 0;
 }
 
+.feature{
+    margin-bottom: 22px;
+}
+
 #features #access-files,
 #features #collaboration,
 #features #security,
@@ -138,8 +137,7 @@ section{
 }
 
 #features #access-files p{
-    width: 50%;
-    padding: 0 28px;
+    padding: 0 24px;
     text-align: center;
 }
 
@@ -155,7 +153,7 @@ section{
     text-align: center;
 }
 
-@media (max-width:1440px) {
+@media (max-width: 1440px) {
     #files h2{
         width:46%;
     }
@@ -238,7 +236,7 @@ section{
 #link a:visited{
     position: relative;
     padding: 0 0 6px 0;
-    color: hsl(176, 32%, 41%);
+    color: hsl(176, 52%, 60%);
     font-size: 18px;
     font-family: 'Open Sans';
     text-decoration: none;
@@ -297,7 +295,7 @@ button{
     margin: 0 0 40px 0;
     font-size: 18px;
     font-family: 'Open Sans';
-    color: hsla(0, 0%, 100%, 0.771);
+    color: hsla(0, 0%, 100%, 0.719);
     @media (max-width:1440px){
         width: 98%;
     }
@@ -339,7 +337,6 @@ button{
 }
 
 footer{
-    width: 100%;
     padding: 40px;
     margin-top: 20rem;
     position: relative;
@@ -541,31 +538,80 @@ footer{
     fill: hsl(176, 68%, 64%);
 }
 
-@media (max-width:375px){
-    body{
-        width: 100%;
+@media (max-width: 376px){
+    #container #hero nav{
+        padding: 50px 20px;
+        align-items: center;
+        margin-bottom: 7px;
     }
-    #container,#hero{
+    #container nav .logo img{
+        height: 30px;
+    }
+    #container #hero nav #nav-links{
         width: 100%;
+        font-size: 14px;
+        margin-left: 40px;
     }
     #files{
-        background-image: url('/images/bg-curvy-mobile.svg');
         background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: bottom;
+        background-image: url('/images/bg-curvy-mobile.svg');
     }
-    footer{
+    #files #intro-img{
+        width: 84%;
+        margin-bottom: 10px;
+    }
+    #files h2{
+        width: 77%;
+        font-size: 22px;
+    }
+    #files p{
         width: 100%;
+        font-size: 14px;
     }
-    #testimonial-1{
-        grid-row: 1/2;
-    }
-
-    #about-work{
-        flex-direction: column;
+    #files #btn{
+        width: 66%;
     }
     #features{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4,1fr);
+    }
+    #features .head{
+        margin-top: 30px;
+    }
+    #features #access-files p,
+    #features #security p{
+        width: 82%;
+        padding: 0;
+    }
+    #features #collaboration p{
+        width: 82%;
+    }
+    #features #storage p{
+        width: 94%;
+    }
+    section{
+        padding: 0;
+    }
+    #about-work{
+        flex-direction: column;
+    }
+    #about-work #img{
+        margin: 0 0 32px 0;
+        width: 110%;
+    }
+    #about-work h2{
+        width: 100%;
+        font-size: 16px;
+    }
+    #about-work p{
+        width: 100%;
+        font-size: 12px;
+    }
+    #about-work #link a,
+    #about-work #link a:visited{
+        font-size: 10px;
+    }
+    #testimonials{
+        grid-template-columns: 1fr;
     }
 }
