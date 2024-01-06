@@ -218,9 +218,9 @@ section{
 }
 
 #about-work p{
-    color: hsla(0, 0%, 100%, 0.71);
     width: 62%;
     line-height: 20px;
+    color: hsla(0, 0%, 100%, 0.71);
 }
 
 #para{
@@ -561,8 +561,9 @@ footer{
         margin-bottom: 10px;
     }
     #files h2{
-        width: 77%;
-        font-size: 22px;
+        width: 86%;
+        font-size: 24px;
+        line-height: 40px;
     }
     #files p{
         width: 100%;
@@ -580,8 +581,9 @@ footer{
     }
     #features #access-files p,
     #features #security p{
-        width: 82%;
+        width: 94%;
         padding: 0;
+        font-size: 16px;
     }
     #features #collaboration p{
         width: 82%;
@@ -594,6 +596,7 @@ footer{
     }
     #about-work{
         flex-direction: column;
+        padding: 0 3rem 0 2rem;
     }
     #about-work #img{
         margin: 0 0 32px 0;
@@ -605,13 +608,109 @@ footer{
     }
     #about-work p{
         width: 100%;
-        font-size: 12px;
+        font-size: 13px;
     }
     #about-work #link a,
     #about-work #link a:visited{
-        font-size: 10px;
+        font-size: 14px;
+    }
+    #link a svg use{
+        background-size: 4px 6px;
     }
     #testimonials{
+        width: 100%;
+        align-items: center;
         grid-template-columns: 1fr;
+    }
+    #bg-quotes{
+        margin: 0 0 -6px 38px;
+        width: 24px;
+    }
+    .tes{
+        width: 86%;
+        margin-bottom: 30px;
+        justify-self: center;
+    }
+    .tes p{
+        margin-bottom: 16px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .author img{
+        height: 30px;
+        width: auto;
+    }
+    .Name{
+        font-size: 14px;
+    }
+    .profession{
+        font-size: 9px;
+    }
+    #inner{
+        width: 90%;
+    }
+    #sign-up h2{
+        font-size: 20px;
+    }
+    #sign-up p{
+        width: 84%;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    #Email{
+        flex-direction: column;
+    }
+    #Email input{
+        width: 100%;
+        height: 48px;
+        margin: 0 0 24px 0;
+    }
+    #Email input::placeholder{
+        font-size: 10px;
+    }
+    #sign-up #Email button{
+        padding: 0;
+        width: 100%;
+        height: 48px;
+        font-size: 14px;
+    }
+    #footer-logo img {
+        width: 60%;
+        margin: 30px 0 30px 0;
+    }
+    #footer-details .contact{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+    }
+    .contact .location{
+        grid-row: 1/2;
+    }
+    .box-contact{
+        width: 107%;
+    }
+    .contact .contact-us {
+        padding: 0;
+        margin-top: -48px;
+        grid-row: 2/3;
+        grid-column:1/1;
+    }
+    .contact .navfooter {
+        grid-row: 3/4;
+        grid-column:1/1;
+        margin: -20px 0 30px 0;
+    }
+    .navfooter a{
+        font-size: 18px;
+    }
+    .contact .navinfo {
+        grid-column:1/1;
+        grid-row: 4/5;
+    }
+    .contact .navsocial {
+        grid-column:1/1;
+        grid-row: 5/6;
+    }
+    .navlist__menu-item {
+        margin-bottom: 12px;
     }
 }
